@@ -1,0 +1,22 @@
+{
+  "name": "postgres-cdc",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "cdcuser",
+    "database.password": "${env:POSTGRES_PASSWORD}",
+    "database.dbname": "cdcdb",
+
+    "topic.prefix": "pg",
+    "plugin.name": "pgoutput",
+
+    "slot.name": "orders_slot",
+    "publication.autocreate.mode": "filtered",
+    "table.include.list": "public.orders",
+
+    "decimal.handling.mode": "string",
+    "time.precision.mode": "connect"
+  }
+}

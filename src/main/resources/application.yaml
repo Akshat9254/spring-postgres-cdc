@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-postgres-cdc
+  kafka:
+    consumer:
+      group-id: orders-cdc-consumer
+      auto-offset-reset: earliest
