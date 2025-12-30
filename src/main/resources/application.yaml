@@ -5,3 +5,29 @@ spring:
     consumer:
       group-id: orders-cdc-consumer
       auto-offset-reset: earliest
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cdcdb
+    username: cdcuser
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        highlight_sql: true
+        jdbc:
+          time_zone: UTC
+        order_inserts: true
+        order_updates: true
+        jdbc.batch_size: 50
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: ${MINIO_ROOT_USER}
+  secret-key: ${MINIO_ROOT_PASSWORD}
+  bucket: blogs
