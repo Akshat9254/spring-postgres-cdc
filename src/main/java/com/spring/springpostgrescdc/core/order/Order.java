@@ -1,4 +1,4 @@
-package com.spring.springpostgrescdc;
+package com.spring.springpostgrescdc.core.order;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

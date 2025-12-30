@@ -1,4 +1,4 @@
-package com.spring.springpostgrescdc;
+package com.spring.springpostgrescdc.core.order;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

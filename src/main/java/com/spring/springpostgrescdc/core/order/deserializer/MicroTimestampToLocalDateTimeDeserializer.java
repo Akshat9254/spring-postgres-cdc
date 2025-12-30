@@ -1,4 +1,4 @@
-package com.spring.springpostgrescdc;
+package com.spring.springpostgrescdc.core.order.deserializer;
 
 import tools.jackson.core.JacksonException;
 import tools.jackson.core.JsonParser;

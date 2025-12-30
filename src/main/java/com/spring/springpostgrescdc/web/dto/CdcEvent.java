@@ -1,4 +1,4 @@
-package com.spring.springpostgrescdc;
+package com.spring.springpostgrescdc.web.dto;
 
 public record CdcEvent<T>(
         T before,
